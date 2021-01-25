@@ -1,2 +1,3 @@
 ---
-# tasks file for nginx-php-fpm-role
+- name: install pre-req
+  package:  name="{{ php_pre_req_packages }}"  state=present
