@@ -48,7 +48,7 @@
     line: "listen.mode = 0660"
 
 - name: install php tools
-  package:  name="{{ php_req_packages }}"  state=present
+  package:  name="{{ php_req_packages }}"  state=present  enablerepo="{{ php_repo }}
 
 - pear:
     name: pecl/imagick
