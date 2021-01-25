@@ -17,6 +17,9 @@ php_pre_req_packages:
   - epel-release
   - yum-utils
 
+nginx_packages:
+  - nginx
+
 php_req_packages:
   - php
   - php-mysqlnd
