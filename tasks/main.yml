@@ -50,5 +50,12 @@
 - name: install php tools
   package:  name="{{ php_req_packages }}"  state=present  enablerepo="{{ php_repo }}"
 
-- name: install pear packages
-  pear:  name="{{ pear_packages }}"  state=present
+- name: install php module
+  community.general.pear:  name="{{ pear_packages }}"  state=present
+
+- name: configure php module
+  copy:
+    dest: /etc/php.d/imagick.ini
+    content: |
+      extension=imagick.so
+  notify: "restart php"
