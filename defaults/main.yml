@@ -20,12 +20,12 @@ php_pre_req_packages:
 nginx_packages:
   - nginx
 
-php_req_packages:
+php_packages:
   - php
   - php-mysqlnd
   - php-fpm
   
-app_req_packages:
+php_req_packages:
   - ImageMagick
   - ImageMagick-devel
   - gss
