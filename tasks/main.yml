@@ -50,6 +50,5 @@
 - name: install php tools
   package:  name="{{ php_req_packages }}"  state=present  enablerepo="{{ php_repo }}"
 
-- pear:
-    name: pecl/imagick
-    state: present
+- name: install pear packages
+  pear:  name="{{ pear_packages }}"  state=present

@@ -31,3 +31,5 @@ php_req_packages:
   - gcc
   - php-devel
   - php-pear
+
+pear_packages: pecl/imagick
