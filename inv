@@ -1,0 +1,1 @@
+web     ansible_host=172.20.0.2 ansible_connection=ssh         ansible_user=mercury    ansible_ssh_pass=planet1
