@@ -23,7 +23,7 @@
     regexp: '^group = apache'
     line: "group = nginx"
 
- - name: configure php-fpm for nginx sock
+- name: configure php-fpm for nginx sock
   lineinfile:
     path: /etc/php-fpm.d/www.conf
     regexp: '^listen = 127.0.0.1:9000'
