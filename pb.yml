@@ -1,0 +1,7 @@
+- name: Deploy the Application
+  remote_user: root
+  hosts: localhost
+  become: true
+
+  roles:
+    - role: nginx-php-fpm-role
