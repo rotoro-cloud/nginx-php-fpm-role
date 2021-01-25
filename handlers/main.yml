@@ -1,2 +1,3 @@
 ---
-# handlers file for nginx-php-fpm-role
+- name: restart nginx
+  service: name=nginx state=restarted
