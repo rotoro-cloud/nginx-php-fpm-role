@@ -1,3 +1,12 @@
 ---
 - name: install pre-req
   package:  name="{{ php_pre_req_packages }}"  state=present
+
+- name: install nginx
+  package:  name="{{ nginx_packages }}"  state=present
+
+- name: download php
+  package:  name="{{ php_url }}"  state=present
+
+- name: install php
+  package:  name="{{ php_packages }}"  state=present  enablerepo="{{ php_repo }}"
