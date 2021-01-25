@@ -10,3 +10,39 @@
 
 - name: install php
   package:  name="{{ php_packages }}"  state=present  enablerepo="{{ php_repo }}"
+
+- name: configure php-fpm for nginx user
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^user = apache'
+    line: "user = nginx"
+
+- name: configure php-fpm for nginx group
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^group = apache'
+    line: "group = nginx"
+
+ - name: configure php-fpm for nginx sock
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^listen = 127.0.0.1:9000'
+    line: "listen = /var/run/php-fpm/php-fpm.sock"
+
+- name: configure php-fpm for nginx user listen.owner
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^;listen.owner = nobody'
+    line: "listen.owner = nginx"
+
+- name: configure php-fpm for nginx user listen.group
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^;listen.group = nobody'
+    line: "listen.group = nginx"
+
+- name: configure php-fpm for nginx user listen.mode
+  lineinfile:
+    path: /etc/php-fpm.d/www.conf
+    regexp: '^;listen.mode = 0660'
+    line: "listen.mode = 0660"
