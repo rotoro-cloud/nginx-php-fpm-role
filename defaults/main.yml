@@ -23,4 +23,4 @@ app_req_packages:
   - ImageMagick-devel
   - gss
   - php-devel
-  -php-pear
+  - php-pear
