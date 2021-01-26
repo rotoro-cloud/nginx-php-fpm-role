@@ -12,24 +12,3 @@ php_fpm_listen_group: "{{ php_fpm_group }}"
 php_fpm_listen_mode: "0660"
 
 php_fpm_listen: /var/run/php-fpm/php-fpm.sock
-
-php_pre_req_packages:
-  - epel-release
-  - yum-utils
-
-nginx_packages:
-  - nginx
-
-php_packages:
-  - php
-  - php-mysqlnd
-  - php-fpm
-  
-php_req_packages:
-  - ImageMagick
-  - ImageMagick-devel
-  - gcc
-  - php-devel
-  - php-pear
-
-pear_packages: pecl/imagick
