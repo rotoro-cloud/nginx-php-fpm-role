@@ -1,2 +1,20 @@
----
-# vars file for nginx-php-fpm-role
+php_pre_req_packages:
+  - epel-release
+  - yum-utils
+
+nginx_packages:
+  - nginx
+
+php_packages:
+  - php
+  - php-mysqlnd
+  - php-fpm
+  
+php_req_packages:
+  - ImageMagick
+  - ImageMagick-devel
+  - gcc
+  - php-devel
+  - php-pear
+
+pear_packages: pecl/imagick
