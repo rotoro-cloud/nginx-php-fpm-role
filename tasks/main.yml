@@ -51,10 +51,10 @@
   package:  name="{{ php_req_packages }}"  state=present  enablerepo="{{ php_repo }}"
 
 ### 06.07.23 pear update protocol fix
-- name: Update pear.php.net channel.
-  command: pear channel-update pear.php.net
-  register: pear_update_result
-  changed_when: "'is up to date' not in pear_update_result.stdout"
+#- name: Update pear.php.net channel.
+#  command: pear channel-update pear.php.net
+#  register: pear_update_result
+#  changed_when: "'is up to date' not in pear_update_result.stdout"
 ###
 
 - name: install php module
