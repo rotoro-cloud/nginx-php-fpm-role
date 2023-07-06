@@ -9,6 +9,7 @@ php_packages:
   - php
   - php-mysqlnd
   - php-fpm
+  - php-gd
   
 php_req_packages:
   - ImageMagick
