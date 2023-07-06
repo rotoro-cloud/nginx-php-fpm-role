@@ -5,11 +5,14 @@
 - name: install nginx
   package:  name="{{ nginx_packages }}"  state=present
 
-- name: download php
-  package:  name="{{ php_url }}"  state=present
+#- name: download php
+#  package:  name="{{ php_url }}"  state=present
+
+#- name: install php
+#  package:  name="{{ php_packages }}"  state=present  enablerepo="{{ php_repo }}"
 
 - name: install php
-  package:  name="{{ php_packages }}"  state=present  enablerepo="{{ php_repo }}"
+  package:  name="{{ php_packages }}"  state=present
 
 - name: configure php-fpm for nginx user
   lineinfile:
