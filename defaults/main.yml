@@ -1,6 +1,6 @@
 ---
-php_url: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-php_repo: remi-php74
+php_url: https://rpms.remirepo.net/enterprise/remi-release-9.rpm 
+php_repo: php:remi-8.2
 
 php_fpm_pool: nginx
 
